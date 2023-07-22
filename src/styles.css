@@ -78,7 +78,7 @@ body {
   content: "CSS " attr(style);
 }
 
-#CSSProgress {
-  // opacity: calc(1 - var(--progress));
-  //transform: scale(var(--progress));
-}
+/* #CSSProgress {
+  opacity: calc(1 - var(--progress));
+  transform: scale(var(--progress));
+} */
