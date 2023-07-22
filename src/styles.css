@@ -9,51 +9,69 @@ body {
   left: 20px;
 }
 
+.wrapper-intro {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+}
+
 .wrapper {
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #eaeaea;
   flex-direction: column;
-  gap: 2.5em 0;
+  gap: 30px 0;
 }
 
-.wrapper-intro {
-  display: flex;
-  // justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  min-height: 90vh;
-  background-color: #aaa;
-  flex-direction: column;
-  gap: 5em 0;
-}
+/* .wrapper *+* {
+  margin-top: 2.5em;
+} */
 
 .box {
   width: 60vw;
-  height: 100px;
-  background-color: blue;
+  height: 200px;
   z-index: 6;
-  transform-origin: top center;
+  /* transform-origin: top center; */
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #d2d2d2;
+  color: white;
+  transition: all 0s ease-out;
+  /* opacity: 0.5; */
+}
+
+.box:not(:first-child,:last-child) {
+  --progressn: calc(1 - var(--progress));
+  --transy: calc(-120px * var(--progressn));
+  --sclac: calc(0.8 + (var(--progress) / 10 * 2));
+  opacity: var(--sclac);
+  transform: translateY(var(--transy)) scale(var(--sclac));
 }
 
 .box:nth-child(2) {
-  --progressn: calc(1 - var(--progress));
-  --transy: calc(-100px * var(--progressn));
-  --sclac: calc(0.8 + (var(--progress) / 10 * 2));
-  transform: translateY(var(--transy)) scale(var(--sclac));
-  background-color: yellow;
+  /* background-color: yellow; */
   z-index: 5;
 }
 
 .box:nth-child(3) {
-  --progressn: calc(1 - var(--progress));
-  --transy: calc(-100px * var(--progressn));
-  --sclac: calc(0.8 + (var(--progress) / 10 * 2));
-  transform: translateY(var(--transy)) scale(var(--sclac));
-  background-color: green;
+  /* background-color: green; */
   z-index: 4;
+}
+
+.box:nth-child(4) {
+  /* background-color: rgba(121, 19, 223); */
+  z-index: 3;
+}
+
+.box:nth-child(5) {
+  /* background-color: rgb(51, 56, 51); */
+  z-index: 2;
+}
+
+.box:nth-child(6) {
+  /* background-color: rgb(2, 8, 2); */
+  z-index: 1;
 }
 
 #CSSProgress::before {
