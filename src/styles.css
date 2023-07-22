@@ -82,3 +82,41 @@ body {
   opacity: calc(1 - var(--progress));
   transform: scale(var(--progress));
 } */
+
+/* debug locomotive scroll beta 8*/
+
+.c-scroll_offset {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+html .c-scroll_offset:before, html .c-scroll_offset:after {
+  width: 100%;
+  height: 1px;
+}
+
+.c-scroll_offset:before {
+  background-color: rgb(217, 66, 66);
+}
+
+.c-scroll_offset:after {
+  background-color: rgb(74, 166, 215);
+}
+
+.c-scroll_offset:before, .c-scroll_offset:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+}
+
+html .c-scroll_offset:before {
+  bottom: var(--offset-start);
+}
+
+html .c-scroll_offset:after {
+  top: var(--offset-end);
+}
