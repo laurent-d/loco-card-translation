@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.title {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eaeaea;
+  flex-direction: column;
+  gap: 2.5em 0;
+}
+
+.wrapper-intro {
+  display: flex;
+  // justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+  background-color: #aaa;
+  flex-direction: column;
+  gap: 5em 0;
+}
+
+.box {
+  width: 60vw;
+  height: 100px;
+  background-color: blue;
+  z-index: 6;
+  transform-origin: top center;
+}
+
+.box:nth-child(2) {
+  --progressn: calc(1 - var(--progress));
+  --transy: calc(-100px * var(--progressn));
+  --sclac: calc(0.8 + (var(--progress) / 10 * 2));
+  transform: translateY(var(--transy)) scale(var(--sclac));
+  background-color: yellow;
+  z-index: 5;
+}
+
+.box:nth-child(3) {
+  --progressn: calc(1 - var(--progress));
+  --transy: calc(-100px * var(--progressn));
+  --sclac: calc(0.8 + (var(--progress) / 10 * 2));
+  transform: translateY(var(--transy)) scale(var(--sclac));
+  background-color: green;
+  z-index: 4;
+}
+
+#CSSProgress::before {
+  content: "CSS " attr(style);
+}
+
+#CSSProgress {
+  // opacity: calc(1 - var(--progress));
+  //transform: scale(var(--progress));
+}
