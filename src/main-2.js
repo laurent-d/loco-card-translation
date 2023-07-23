@@ -17,9 +17,9 @@ window.addEventListener("progressEvent", (e) => {
   target.innerHTML = `Javascript Progress: ${progress}`;
   // target.style.opacity = 1 - progress;
 
-  const xxx = "-60";
+  const xxx = "-20";
   const progressN = 1 - progress;
-  const initScale = 0.8;
+  const initScale = 0.85;
   const stepScale = 1 - initScale;
   const translateY = xxx * progressN;
   const scale = initScale + progress * stepScale;
