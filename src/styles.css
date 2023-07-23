@@ -1,3 +1,8 @@
+:root{
+  --height-block: 200px;
+  --gap-blocks: 30px;
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -7,12 +12,16 @@ body {
   position: fixed;
   top: 20px;
   left: 20px;
+  font-size: 10vh;
+  margin: 0;
+  line-height: 1;
+  color: #323232;
 }
 
 .wrapper-intro {
   display: flex;
   width: 100%;
-  min-height: calc(100vh - 100px);
+  min-height: calc(98vh - (var(--height-block) + var(--gap-blocks)));
 }
 
 .wrapper {
@@ -21,7 +30,7 @@ body {
   width: 100%;
   min-height: 100vh;
   flex-direction: column;
-  gap: 30px 0;
+  gap: var(--gap-blocks) 0;
 }
 
 /* .wrapper *+* {
@@ -29,8 +38,9 @@ body {
 } */
 
 .box {
-  width: 60vw;
-  height: 200px;
+  width: 600px;
+  max-width: 80%;
+  height: var(--height-block);
   z-index: 6;
   /* transform-origin: top center; */
   padding: 15px;
@@ -38,15 +48,21 @@ body {
   background-color: #d2d2d2;
   color: white;
   transition: all 0s ease-out;
-  /* opacity: 0.5; */
+  box-shadow: 0 4px 12px #0000001a;
+  will-change: transform,opacity,height;
 }
 
 .box:not(:first-child,:last-child) {
-  --progressn: calc(1 - var(--progress));
-  --transy: calc(-120px * var(--progressn));
-  --sclac: calc(0.8 + (var(--progress) / 10 * 2));
-  opacity: var(--sclac);
-  transform: translateY(var(--transy)) scale(var(--sclac));
+  /* --xxx : -120px; */
+  --xxx: -60%;
+  --init-scale: 0.8;
+  --step-scale: calc(1 - var(--init-scale));
+
+  --progress-n: calc(1 - var(--progress));
+  --t-y: calc(var(--xxx) * var(--progress-n));
+  --scale: calc(var(--init-scale) + (var(--progress) * var(--step-scale)));
+  opacity: var(--scale);
+  transform: translateY(var(--t-y)) scale(var(--scale));
 }
 
 .box:nth-child(2) {
