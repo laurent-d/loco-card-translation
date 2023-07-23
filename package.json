@@ -2,14 +2,15 @@
   "name": "progress",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel src/index-js.html --open",
+    "dev": "parcel src/*.html --out-dir development -p 3000",
+    "build": "parcel build src/index-js.html"
   },
   "dependencies": {
     "locomotive-scroll": "5.0.0-beta.8",
-    "parcel-bundler": "^1.6.1"
+    "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",

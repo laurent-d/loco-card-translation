@@ -4,71 +4,79 @@
     <title>Progress - Locomotive Scroll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="./styles.css" /> -->
   </head>
 
   <body>
     <div class="c-scroll_offset" style="--offset-start: 2%; --offset-end: 90%;"></div>
     <main class="main">
-      <h1 class="title">Progress<br><small>height 813px</small></h1>
+      <div class="title">
+        <h1>JS progress</h1>
+        <!-- <a href="index.html">CSS version</a> -->
+      </div>
       <div class="wrapper-intro"></div>
       <div class="wrapper">
+
         <div
-          id="CSSProgress"
           class="box"
           data-scroll
-          data-scroll-css-progress
+          data-scroll-repeat
+          data-scroll-ignore-fold
           data-scroll-offset="2%,90%"
           data-scroll-position="start, middle"
-        ></div>
-        <div
-          id="CSSProgress"
-          class="box"
-          data-scroll
-          data-scroll-css-progress
-          data-scroll-offset="2%,90%"
-          data-scroll-position="start, middle"
-        ></div>
-        <div
-          id="CSSProgress"
-          class="box"
-          data-scroll
-          data-scroll-css-progress
-          data-scroll-offset="2%,90%"
-          data-scroll-position="start, middle"
-        ></div>
-        <div
-          id="CSSProgress"
-          class="box"
-          data-scroll
-          data-scroll-css-progress
-          data-scroll-offset="2%,90%"
-          data-scroll-position="start, middle"
-        ></div>
-        <div
-          id="CSSProgress"
-          class="box"
-          data-scroll
-          data-scroll-css-progress
-          data-scroll-offset="2%,90%"
-          data-scroll-position="start, middle"
-        ></div>
-        <div
-          id="CSSProgress"
-          class="box"
-          data-scroll
-          data-scroll-css-progress
-          data-scroll-offset="2%,90%"
-          data-scroll-position="start, middle"
-        ></div>
-        <div
-          id="JSProgress"
-          class="box"
-          data-scroll
           data-scroll-event-progress="progressEvent"
         ></div>
+
+        <div
+          class="box"
+          data-scroll
+          data-scroll-repeat
+          data-scroll-ignore-fold
+          data-scroll-offset="2%,90%"
+          data-scroll-position="start, middle"
+          data-scroll-event-progress="progressEvent"
+        ></div>
+        <div
+          class="box"
+          data-scroll
+          data-scroll-repeat
+          data-scroll-ignore-fold
+          data-scroll-offset="2%,90%"
+          data-scroll-position="start, middle"
+          data-scroll-event-progress="progressEvent"
+        ></div>
+        <div
+          class="box"
+          data-scroll
+          data-scroll-repeat
+          data-scroll-ignore-fold
+          data-scroll-offset="2%,90%"
+          data-scroll-position="start, middle"
+          data-scroll-event-progress="progressEvent"
+        ></div>
+
+        <div
+          class="box"
+          data-scroll
+          data-scroll-repeat
+          data-scroll-ignore-fold
+          data-scroll-offset="2%,90%"
+          data-scroll-position="start, middle"
+          data-scroll-event-progress="progressEvent"
+        ></div>
+        <div
+          class="box"
+          data-scroll
+          data-scroll-repeat
+          data-scroll-ignore-fold
+          data-scroll-offset="2%,90%"
+          data-scroll-position="start, middle"
+          data-scroll-event-progress="progressEvent"
+        ></div>
+
       </div>
       <div style="height: 100vh;"></div>
     </main>
-    <script src="src/index.js"></script>
+    <script src="./main-2.js"></script>
   </body>
 </html>
