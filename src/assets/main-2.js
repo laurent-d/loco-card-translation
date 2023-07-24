@@ -47,14 +47,3 @@ window.addEventListener("scrollEvent", (e) => {
     target.style.opacity = "0.5";
   }
 });
-
-
-// --xxx: -60%;
-// --init-scale: 0.8;
-// --step-scale: calc(1 - var(--init-scale));
-
-// --progress-n: calc(1 - var(--progress));
-// --t-y: calc(var(--xxx) * var(--progress-n));
-// --scale: calc(var(--init-scale) + (var(--progress) * var(--step-scale)));
-// opacity: var(--scale);
-// transform: translateY(var(--t-y)) scale(var(--scale));
